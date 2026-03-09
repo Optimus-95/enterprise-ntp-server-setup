@@ -1,12 +1,15 @@
-installation steps:
-# NTP Server Setup Using Chrony
+# Installation steps for RHEL:
 
-## Install Chrony
+dnf install chrony*
 
-sudo apt update
-sudo apt install chrony
+vi /etc/chrony.conf
 
-## Enable Service
+# Installation steps for Ubuntu:
 
-sudo systemctl enable chronyd
-sudo systemctl start chronyd
+apt install chrony*
+
+vi /etc/chrony/chrony.conf
+
+timedatectl set-timezone Asia/Kolkata
+
+timedatectl set-ntp true
