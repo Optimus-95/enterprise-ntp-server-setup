@@ -1,0 +1,10 @@
+# NTP Architecture
+
+This diagram shows the architecture of the NTP setup implemented in this project.
+
+- Public NTP pool servers provide accurate time.
+- The Linux server (Chrony) synchronizes with these external sources.
+- Client machines in the internal network request time from the NTP server.
+- The NTP server distributes synchronized time to all clients.
+
+This setup ensures consistent system time across all machines in the network.
